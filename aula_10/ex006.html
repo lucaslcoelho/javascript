@@ -7,6 +7,7 @@
     <style>
         div#area {
             font: normal;
+            font-size: 40px;
             background: rgb(42, 139, 42);
             border-radius: 10px;
             color: #fff;
@@ -18,8 +19,23 @@
     </style>
 </head>
 <body>
-    <div id="area">
+    <div id="area" onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()">
         Interaja...
     </div>
+
+    <script>
+        function clicar() {
+            var area = window.document.getElementById('area')
+            area.innerText = 'Clicou!'
+        }
+        function entrar() {
+            var area = window.document.getElementById('area')
+            area.innerText = 'Entrou'
+        }
+        function sair() {
+            var area = window.document.getElementById('area')
+            area.innerText = 'Saiu'
+        }
+    </script>
 </body>
 </html>
